@@ -1,0 +1,7 @@
+Credentials cache: API:90C57B04-AE94-4DF5-AB9F-A103AD785B97
+        Principal: kemartin@42.FR
+
+  Issued                Expires               Principal
+Aug 27 18:25:04 2018  Sep  3 18:25:04 2018  krbtgt/42.FR@42.FR
+Aug 27 19:01:38 2018  Sep  3 18:25:04 2018  host/vgs-fn1.42.fr@42.FR
+Aug 27 19:06:23 2018  Sep  3 18:25:04 2018  ldap/ldap-proxy.42.fr@42.FR
