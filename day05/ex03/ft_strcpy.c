@@ -6,7 +6,7 @@
 /*   By: kemartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 10:25:04 by kemartin          #+#    #+#             */
-/*   Updated: 2018/09/01 11:08:53 by kemartin         ###   ########.fr       */
+/*   Updated: 2018/09/05 15:28:06 by kemartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@ char	*ft_strcpy(char *dest, char *src)
 {
 	int i;
 
-	i = -1;
-	while (src[i++] != '\0')
+	i = 0;
+	while (src[i])
+	{
 		dest[i] = src[i];
-	dest[i] = '\0';
+		i++;
+	}
+	dest[i] = 0;
 	return (dest);
 }

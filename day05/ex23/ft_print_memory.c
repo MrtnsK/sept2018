@@ -6,7 +6,7 @@
 /*   By: kemartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 00:36:39 by kemartin          #+#    #+#             */
-/*   Updated: 2018/09/05 12:45:28 by kemartin         ###   ########.fr       */
+/*   Updated: 2018/09/05 16:08:58 by kemartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,9 @@ void	ft_putstr(char *str, unsigned int size, unsigned int hexa)
 
 	i = hexa;
 	ft_putchar(' ');
-	ft_putchar(' ');
 	while (i < hexa + 16 && i < size)
 	{
-		if (str[i] < 32)
+		if (str[i] < 32 || str[i] == 127)
 			ft_putchar('.');
 		else
 			ft_putchar(str[i]);
@@ -70,7 +69,6 @@ void	addr_mem(int memory)
 	ft_putnbr_base(memory);
 	ft_putchar('0');
 	ft_putchar(':');
-	ft_putchar(' ');
 }
 
 void	print_hexa(char *address, unsigned int hexa, unsigned int size,
@@ -83,19 +81,19 @@ void	print_hexa(char *address, unsigned int hexa, unsigned int size,
 	index = 0;
 	while (t < hexa + 16)
 	{
+		if (t % 2 == 0)
+			ft_putchar(' ');
 		if (global * 16 + index < size)
 		{
 			if (address[t] <= 15)
 				ft_putchar('0');
 			ft_putnbr_base(address[t]);
 		}
-		else
+		else if (!(global * 16 + index < size))
 		{
 			ft_putchar(' ');
 			ft_putchar(' ');
 		}
-		if (t % 2 == 1)
-			ft_putchar(' ');
 		t++;
 		index++;
 	}

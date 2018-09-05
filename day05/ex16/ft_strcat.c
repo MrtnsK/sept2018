@@ -6,7 +6,7 @@
 /*   By: kemartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/02 03:16:07 by kemartin          #+#    #+#             */
-/*   Updated: 2018/09/02 11:24:07 by kemartin         ###   ########.fr       */
+/*   Updated: 2018/09/05 15:33:58 by kemartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@ char	*ft_strcat(char *dest, char *src)
 	j = 0;
 	while (dest[i])
 		i++;
-	while (src[i])
+	while (src[j])
 	{
-		src[i] = dest[j];
-		i++;
+		dest[i + j] = dest[j];
 		j++;
 	}
-	dest[j] = '\0';\
+	dest[i + j] = '\0';
 	return (dest);
 }
