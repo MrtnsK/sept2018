@@ -6,7 +6,7 @@
 /*   By: kemartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/04 00:36:39 by kemartin          #+#    #+#             */
-/*   Updated: 2018/09/05 16:53:47 by kemartin         ###   ########.fr       */
+/*   Updated: 2018/09/06 03:11:32 by kemartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,5 +119,5 @@ void	*ft_print_memory(void *addr, unsigned int size)
 		hexa += 16;
 		i++;
 	}
-	return (0);
+	return (address);
 }
