@@ -6,7 +6,7 @@
 /*   By: kemartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/05 10:37:50 by kemartin          #+#    #+#             */
-/*   Updated: 2018/09/05 12:14:59 by kemartin         ###   ########.fr       */
+/*   Updated: 2018/09/06 23:31:31 by kemartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(char *src)
 {
-	int i;
-	char *dest;
+	int		i;
+	char	*dest;
 
 	i = 0;
 	while (src[i])

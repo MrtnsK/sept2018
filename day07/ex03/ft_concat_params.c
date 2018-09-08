@@ -6,7 +6,7 @@
 /*   By: kemartin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/05 19:24:26 by kemartin          #+#    #+#             */
-/*   Updated: 2018/09/05 21:56:02 by kemartin         ###   ########.fr       */
+/*   Updated: 2018/09/08 19:24:37 by kemartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,27 +37,26 @@ char	*ft_concat_params(int argc, char **argv)
 	char	*str;
 	int		i;
 	int		j;
-	int		k;
 	int		len;
 
-	k = 0;
 	i = 1;
 	len = argv_len(argc, argv);
-	if (!(str = malloc(sizeof(char) * (len + 1))))
-		return (0);
-	while (i < argc)
+	if (argc <= 1)
+		return ("");
+	if (!(str = malloc(sizeof(char) * (len + 2))))
+		return ("");
+	len = 0;
+	while (argv[i])
 	{
 		j = 0;
-		while (argv[i][j] != '\0')
+		while (argv[i][j])
 		{
-			str[k] = argv[i][j];
-			k++;
+			str[len++] = argv[i][j];
 			j++;
 		}
-		str[k] = '\n';
-		k++;
+		str[len++] = '\n';
 		i++;
 	}
-	str[k - 1] = '\0';
+	str[len - 1] = '\0';
 	return (str);
 }
